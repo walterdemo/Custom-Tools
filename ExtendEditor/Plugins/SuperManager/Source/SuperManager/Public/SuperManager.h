@@ -23,8 +23,14 @@ private:
 
 	void InitCBMenuExtention();
 
+	TArray<FString> FolderPathsSelected;
+
 	TSharedRef<FExtender> CustomCBMenuExtender(const TArray<FString>& SelectedPaths);
 	void AddCBMenuEntry(class FMenuBuilder& MenuBuilder);
 	void OnDeleteUnsuedAssetButtonClicked();
+
+	void FixUpRedirectors();
+
+	
 #pragma endregion
 };
